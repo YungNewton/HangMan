@@ -76,7 +76,7 @@ print("Guess the letters in a random word.\nIf your letter is actually a part of
 time.sleep(3)
 print(f'If not. Hangman is slowly led towards death.')
 time.sleep(2)
-print(f"If you guess a wrong letter 8 times hangman dies")
+print(f"If you guess a wrong letter 8 times hangman is hung")
 time.sleep(2)
 print(f' {HANGMANPICS[7]}')
 isplay = input("Enter 'start' if you're ready to play: ")
