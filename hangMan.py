@@ -116,10 +116,6 @@ random_words =('able about account acid across act addition adjustment advertise
               'stork swan tiger toad trout turkey turtle weasel whale wolf '
               'wombat zebra '
               'you young Android ').split()
-final = []
-death = 0
-isWin = False
-isHung = False
 score = 0
 print("welcome to Hangman")
 time.sleep(1.5)
@@ -139,6 +135,10 @@ else:
 if isplay.lower == "start" or isSure.lower != 'n':
     games = int(input("how many games do you want to play?: "))
     for i in range(games):
+        death = 0
+        isWin = False
+        isHung = False
+        final = []
         word = random.choice(random_words)
         length =  len(word)
         print(f'Your word is a {length} letter word')
@@ -161,7 +161,7 @@ if isplay.lower == "start" or isSure.lower != 'n':
                 break
             if isWin == False:
                 position = 0
-                #print(word)
+                print(word)
                 print("")
                 print(*final)
                 print("")
