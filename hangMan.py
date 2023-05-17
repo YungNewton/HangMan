@@ -70,7 +70,7 @@ print(f' {HANGMANPICS[6]}')
 isplay = input("Enter 'start' if you're ready to play: ")
 isSure = 'N'
 if isplay.lower() == "start":
-    print("GAME ON!!!");
+    print("GAME ON!!!")
 else:
     isSure = input("Enter the word 'start' if your'e willing to play\nIf not enter 'N' for no.")
 if isplay.lower == "start" or isSure.lower != 'n':
@@ -81,4 +81,20 @@ if isplay.lower == "start" or isSure.lower != 'n':
         print(f'Your word is a {length} letter word')
         for d in range(length):
             print('_ ',end ="")
-            print("")
+        print("")
+        print("")
+        for a in range(8):
+            print(word)
+            UserChoice = input('Guess a letter: ')
+            if UserChoice in word:
+                print(f'CORRECT! {UserChoice} is actually a part of the word.')
+                for s in range(length):
+                    position =0
+                    if word[position] == UserChoice:
+                        print(UserChoice, end="")
+                    else:
+                        print('_ ',end ="")
+                    position+=1
+                print('')
+
+
