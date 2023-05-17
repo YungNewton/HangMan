@@ -81,3 +81,4 @@ if isplay.lower == "start" or isSure.lower != 'n':
         print(f'Your word is a {length} letter word')
         for d in range(length):
             print('_ ',end ="")
+            print("")
