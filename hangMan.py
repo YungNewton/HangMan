@@ -59,6 +59,8 @@ words = ('ant baboon badger bat bear beaver camel cat clam cobra cougar '
          'stork swan tiger toad trout turkey turtle weasel whale wolf '
          'wombat zebra ').split()
 final = []
+death = 0
+isWin = True
 print("welcome to Hangman")
 time.sleep(1.5)
 print("Guess the letters in a random word.\nIf your letter is actually a part of the word it is added to the spelling.")
@@ -86,11 +88,11 @@ if isplay.lower == "start" or isSure.lower != 'n':
             final.append("__")
         print("")
         print("")
-        for a in range(8):
+        while isWin:
             position = 0
             print(word)
             UserChoice = input('Guess a letter: ')
-            if UserChoice in word:
+            if UserChoice.lower() in word:
                 print(f'CORRECT! {UserChoice} is actually a part of the word.')
                 print("")
                 for s in range(length):
@@ -100,7 +102,63 @@ if isplay.lower == "start" or isSure.lower != 'n':
                 print(*final)
                 print('')
             else:
-                print
+                print(f"Opps!! {UserChoice} is not a letter in this word.")
+                time.sleep(1)
+                print("Try again.")
+                time.sleep(0.5)
+                if death == 0:
+                    print("Hang mans gallow has been made.")
+                    print(f"{HANGMANPICS[death]}")
+                    time.sleep(1)
+                    print("Hang man Still trusts you though. Don't let him Die")
+                    time.sleep(2)
+                elif death ==1:
+                    print("hang Man's hanging is proceeding.")
+                    time.sleep(1)
+                    print(HANGMANPICS[death])
+                elif death ==2:
+                    print("hang Man's hanging is proceeding.")
+                    time.sleep(1)
+                    print(HANGMANPICS[death])
+                elif death ==3:
+                    print("hang Man's hanging is proceeding.")
+                    time.sleep(1)
+                    print("Hang Man says he will be hung if you fail four more times")
+                    time.sleep(1.5)
+                    print(HANGMANPICS[death])
+                elif death ==4:
+                    print("hang Man's hanging is proceeding.")
+                    time.sleep(1)
+                    print("Hang Man says he will be hung if you fail three more times")
+                    time.sleep(1.5)
+                    print(HANGMANPICS[death])
+                elif death ==5:
+                    print("hang Man's hanging is proceeding.")
+                    time.sleep(1)
+                    print("Hang Man is now scared")
+                    time.sleep(1.5)
+                    print(HANGMANPICS[death])
+                elif death ==6:
+                    print("hang Man's hanging is proceeding.")
+                    time.sleep(1)
+                    print("Hang Man says he will be hung if you fail 2 more times")
+                    time.sleep(1.5)
+                    print(HANGMANPICS[death])
+                elif death ==7:
+                    print("hang Man's hanging is proceeding.")
+                    time.sleep(1)
+                    print("Hang Man says you have one more try")
+                    time.sleep(1.5)
+                    print(HANGMANPICS[death])
+                elif death ==8:
+                    print("hang Man has been hung!")
+                    time.sleep(1.5)
+                    print(HANGMANPICS[death])
+                    time.sleep(1)
+                    print("Try again")
+                    print(f"Your Word Was {word.upper()}")
+                    isWin = False
+                death+=1
 
 else:
     print("Rerun Code Whenever you want to start and Enter start on Prompt")                
