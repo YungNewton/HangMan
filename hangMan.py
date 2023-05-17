@@ -70,6 +70,7 @@ final = []
 death = 0
 isWin = False
 isHung = False
+score = 0
 print("welcome to Hangman")
 time.sleep(1.5)
 print("Guess the letters in a random word.\nIf your letter is actually a part of the word it is added to the spelling.")
@@ -104,6 +105,8 @@ if isplay.lower == "start" or isSure.lower != 'n':
                 print("")
                 print(*final)
                 print("")
+                score+=1
+                print(f"score : {score} out of {games} games.")
                 isWin == True
                 break
             if isWin == False:
