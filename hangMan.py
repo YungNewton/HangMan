@@ -161,12 +161,12 @@ if isplay.lower == "start" or isSure.lower != 'n':
                 break
             if isWin == False:
                 position = 0
-                print(word)
+                #print(word)
                 print("")
                 print(*final)
                 print("")
                 print("")
-                UserChoice = input('Guess a letter: ')
+                UserChoice = (input('Guess a letter: ')).lower()
                 if UserChoice.lower() in word:
                     print(f'CORRECT! {UserChoice} is actually a part of the word.')
                     for s in range(length):
